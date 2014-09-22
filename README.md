@@ -43,6 +43,8 @@ The variables should be set as follows:
 LIQUIBASE_CONTAINER - the name of the docker container  
 REFERENCE_DB_CONTAINER - the docker container running a (postgres) database being the reference of the diff command  
 CONNECTION_STRING - the connection to the target database  
+DB_IP - the IP address of the target database  
+DB_NAME - the target database name  
 DB_USER - the user to the target database  
 DB_PASS - password to the target database  
 LIQUIBASE_INCLUSION_FILE - changelog file name in the _changelogs_ folder, the generated diff file will be added as an include tag to it if provided  
