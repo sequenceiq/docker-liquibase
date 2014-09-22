@@ -2,7 +2,7 @@ FROM dockerfile/java
 
 MAINTAINER SequenceIq
 
-# install liquibase
+# download liquibase
 ADD http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.2-bin.tar.gz/download /tmp/liquibase-3.2.2-bin.tar.gz
 
 # Create a directory for liquibase
@@ -19,7 +19,7 @@ RUN ln -s /opt/liquibase/liquibase /usr/local/bin/
 ADD http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar /opt/jdbc_drivers/
 RUN ln -s /opt/jdbc_drivers/postgresql-9.3-1102.jdbc41.jar /usr/local/bin/
 
-# Add configuration script
+# Add command scripts
 ADD scripts /scripts
 RUN chmod -R +x /scripts
 
