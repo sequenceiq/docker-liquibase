@@ -22,7 +22,7 @@ The image comes with a preinstalled postgres jdbc driver.
 Linked with a postgres database and provided with a volume, the container can be used
 to automatically perform diff and update operations.
 
-For *diff* run:
+#### diff
 
 ```
 docker run -it \
@@ -56,7 +56,7 @@ By running the command above , you'll get on the volume:
 2. the new changelog file included in the provided include-file
 
 
-For *update* run:
+#### update
 
 ```
 docker run -it \
