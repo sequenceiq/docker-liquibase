@@ -9,7 +9,7 @@ By default runs a simple container with Liquibase:
 
 ```docker run -it --name liquibase sequenceiq/docker-liquibase```
 
-In the appearing shell you can perform the usual liquibase operations.
+In the shell you can perform the usual `liquibase` operations.
 
 ### Support for automation
 
