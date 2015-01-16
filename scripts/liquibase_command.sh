@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 echo "Setting up liquibase..."
 ./scripts/liquibase_setup.sh
