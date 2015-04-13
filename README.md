@@ -7,7 +7,7 @@ Docker image with Liquibase installation.
 
 By default runs a simple container with Liquibase:
 
-```docker run -it --name liquibase sequenceiq/docker-liquibase```
+```docker run -it --name liquibase sequenceiq/liquibase```
 
 In the shell you can perform the usual `liquibase` operations.
 
