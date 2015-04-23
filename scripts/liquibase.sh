@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Setting up liquidbase"
 : ${DB_ENV_POSTGRES_USER?"DB_ENV_POSTGRES_USER not set"}
 : ${DB_ENV_POSTGRES_PASSWORD?"DB_ENV_POSTGRES_PASSWORD not set"}
 
@@ -10,3 +9,8 @@ cat <<CONF > /liquibase.properties
   username: $DB_ENV_POSTGRES_USER
   password: $DB_ENV_POSTGRES_PASSWORD
 CONF
+
+echo "Applying changes to the database. Changelog: $CHANGELOG_FILE"
+#liquibase --changeLogFile="$CHANGELOG_FILE" update
+#liquibase --changeLogFile=/changelogs/changelogs.xml update
+#liqibase "$@"

@@ -26,8 +26,6 @@ RUN ln -s /opt/jdbc_drivers/postgresql-9.3-1102.jdbc41.jar /usr/local/bin/
 ADD scripts /scripts
 RUN chmod -R +x /scripts
 
-VOLUME ["/changelogs"]
-
 WORKDIR /
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/scripts/liquibase.sh"]
