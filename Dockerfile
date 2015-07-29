@@ -1,4 +1,4 @@
-FROM dockerfile/java
+FROM java
 
 MAINTAINER SequenceIq
 

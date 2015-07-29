@@ -75,3 +75,27 @@ LIQUIBASE_CONTAINER - the name of the docker container
 DB_CONTAINER - the container name running the target database  
 LIQUIBASE_CHANGELOGS - volume with the changelogs to be applied  
 LIQUIBASE_CHANGELOG_FILE - the name of the changelog file to be applied
+
+#### generate
+
+```
+docker run -it \
+--name $LIQUIBASE_CONTAINER \
+--link $DB_CONTAINER:db \
+--entrypoint="/scripts/liquibase_command.sh" \
+-v /$LIQUIBASE_CHANGELOGS:/changelogs \
+-e CHANGELOG_FILE=$LIQUIBASE_CHANGELOG_FILE \
+-e DB_SCHEMA_NAME=$SCHEMA_NAME \
+-e DIFF_TYPES=data \
+sequenceiq/docker-liquibase\
+"generate"
+```
+
+Variables:
+
+LIQUIBASE_CONTAINER - the name of the docker container
+DB_CONTAINER - the container name running the target database
+LIQUIBASE_CHANGELOGS - volume with the changelogs to be applied
+LIQUIBASE_CHANGELOG_FILE - the name of the changelog file to be applied
+SCHEMA_NAME(optional) - which schema to run against
+DIFF_TYPES(optional) - which diff type to use
