@@ -13,4 +13,8 @@ case "$1" in
         echo "Applying changelogs ..."
         ./scripts/liquibase_update.sh
         ;;
+    "generate" )
+        echo "Generating changelog ..."
+        ./scripts/liquibase_generate.sh
+        ;;
 esac
