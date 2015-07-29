@@ -28,7 +28,6 @@ to automatically perform diff and update operations.
 docker run -it \
 --name $LIQUIBASE_CONTAINER \
 --link $REFERENCE_DB_CONTAINER:db \
---entrypoint="/scripts/liquibase_command.sh" \
 -e CONNECTION_STRING="jdbc:postgresql://$DB_IP:5432/$DB_NAME" \
 -e DB_USER="$DB_USER" \
 -e DB_PASS="$DB_PASS" \
@@ -62,7 +61,6 @@ By running the command above , you'll get on the volume:
 docker run -it \
 --name $LIQUIBASE_CONTAINER \
 --link $DB_CONTAINER:db \
---entrypoint="/scripts/liquibase_command.sh" \
 -v /$LIQUIBASE_CHANGELOGS:/changelogs \
 -e CHANGELOG_FILE=$LIQUIBASE_CHANGELOG_FILE \
 sequenceiq/docker-liquibase\
@@ -82,7 +80,6 @@ LIQUIBASE_CHANGELOG_FILE - the name of the changelog file to be applied
 docker run -it \
 --name $LIQUIBASE_CONTAINER \
 --link $DB_CONTAINER:db \
---entrypoint="/scripts/liquibase_command.sh" \
 -v /$LIQUIBASE_CHANGELOGS:/changelogs \
 -e CHANGELOG_FILE=$LIQUIBASE_CHANGELOG_FILE \
 -e DB_SCHEMA_NAME=$SCHEMA_NAME \

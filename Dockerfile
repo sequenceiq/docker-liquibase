@@ -30,4 +30,4 @@ VOLUME ["/changelogs"]
 
 WORKDIR /
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/scripts/liquibase_command.sh"]
