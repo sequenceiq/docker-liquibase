@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Setting up liquidbase"
+echo "Setting up liquibase"
 : ${DB_ENV_POSTGRES_USER?"DB_ENV_POSTGRES_USER not set"}
 : ${DB_ENV_POSTGRES_PASSWORD?"DB_ENV_POSTGRES_PASSWORD not set"}
 
