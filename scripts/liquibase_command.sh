@@ -17,4 +17,6 @@ case "$1" in
         echo "Generating changelog ..."
         ./scripts/liquibase_generate.sh
         ;;
+     * )
+        exec "$@"
 esac
