@@ -34,7 +34,7 @@ docker run -it \
 -e DB_PASS="$DB_PASS" \
 -e LIQUIBASE_INCLUSION_FILE="$LIQUIBASE_INCLUSION_FILE" \
 -v /$LIQUIBASE_CHANGELOGS:/changelogs \
-sequenceiq/docker-liquibase \
+sequenceiq/liquibase \
 "diff"
 ```
 
@@ -65,7 +65,7 @@ docker run -it \
 --entrypoint="/scripts/liquibase_command.sh" \
 -v /$LIQUIBASE_CHANGELOGS:/changelogs \
 -e CHANGELOG_FILE=$LIQUIBASE_CHANGELOG_FILE \
-sequenceiq/docker-liquibase\
+sequenceiq/liquibase\
 "update"
 ```
 
@@ -87,7 +87,7 @@ docker run -it \
 -e CHANGELOG_FILE=$LIQUIBASE_CHANGELOG_FILE \
 -e DB_SCHEMA_NAME=$SCHEMA_NAME \
 -e DIFF_TYPES=data \
-sequenceiq/docker-liquibase\
+sequenceiq/liquibase\
 "generate"
 ```
 
